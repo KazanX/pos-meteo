@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+     <head>
+          <meta charset="UTF-8" />
+          <title>POGODA DLA TWOJEJ OKOLICY</title>
+     </head>
+     <body>
+		<body bgcolor=ADFF2F />
+		  <nav>
+               <a href="main.htm">Strona główna</a>
+          </nav>
+          <header>
+                  <center> <img src="photos\logo_small.png" alt="LOGO TEWC"/>  </center>
+				  <br />
+
+WYBIERZ STACJE Z TWOJEJ OKOLICY
+          </header>
+<form action="...">
+	<select name="stacja">
+		<option>stacja 048 - Politechnika Gdańska</option>
+		<option>błąd połączenia z bazą danych!</option>
+		(...)
+	</select>
+</form>
+
+          <section>
+               <article>
+                   <center> Aktualna pogoda (na dzień
+						<script>
+							document.write(((x=(t=new Date()).getDate())<10?"0":"")+x+"."+((x=(t.getMonth()+1))<10?"0":"")+x+"."+t.getFullYear()+" "+/[\d:]{8}/.exec(t));
+						</script>): 
+						
+						<br />
+						<table>
+							<tr>
+									<td>TEMPERATURA:</td>	<td>...</td>
+							</tr>
+							<tr>
+									<td>CIŚNIENIE:</td>	<td>...</td>
+							</tr>
+							<tr>
+									<td>PRĘDKOŚĆ WIATRU:</td>	<td>...</td>
+							</tr>
+						</table>
+						
+						<br />
+						<br />
+						ewentualnie mogę zrobić tak:
+						<br />
+						TEMPERATURA: 
+<button onclick="myFunction()">SPRAWDZ</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = Math.floor((Math.random() * 10) + 1);
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+					</center>
+               </article>
+          </section>
+          <aside>
+               <a target="_blank" href="http://eti.pg.edu.pl/">Strona naszego sposonsora</a>
+          </aside>
+          <footer>
+<br />
+<hr width="80%" />
+<br />
+<br />
+
+               <center>STRONA JEST CZEŚCIĄ PROJEKTU z POS <br /> <br />
+
+			   Sylwia Bilińska, Anna Strahl, Adrian Kazanowski, Jakub Roziewski, maj 2017</center>
+          </footer>
+     </body>
+</html>
