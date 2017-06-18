@@ -1,8 +1,22 @@
 <?php
-include('dbconnect.php'); //Zestawienie polaczenia z baza danych
-if(isset($_POST['ws'])){ //Sprawdzenie czy zostal przeslany parametr za pomoca metody POST
-$stationID = $_POST['ws']; //Wybranie stacji pogodowej
-}
+/**@file
+* @brief Website showing results of weather measurments
+*
+*	Website showing results of weather measurments. It's connected with the database (local or remote) and
+*	acquires data from it. It's using SQL queries send by PHP code.
+*	
+*
+*
+*
+*	@version 1.0
+*	@date 06/2017
+*
+*	Created on: 06/2017
+*
+*/
+include('dbconnect.php'); //Connecting with database
+if(isset($_POST['ws'])){ //Checking if there was send station identificator
+$stationID = $_POST['ws']; //Getting station ID
 else{
 $stationID = "gda1";
 }
