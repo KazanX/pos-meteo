@@ -1,14 +1,14 @@
 <?php
-$servername = "localhost";
-$username = "id1915238_pogodynka";
-$password = "kaczuszka";
-$dbname = "id1915238_wstation";
+$servername = "localhost"; // Adres serwera z baza danych
+$username = "username"; // Nazwa uzytkownika
+$password = "passoword"; // Haslo
+$dbname = "databasename"; // Nazwa bazy danych
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+$conn = new mysqli($servername, $username, $password, $dbname); // Stworzenie polaczenia
+
+
+if ($conn->connect_error) { // Sprawdzenie poprawnosci utworzonego polaczenia
+	die("Connection failed: " . $conn->connect_error);
 } 
 ?>
