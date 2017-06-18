@@ -44,7 +44,7 @@ WYBIERZ STACJE Z TWOJEJ OKOLICY
 <article>
 <center>Aktualna pogoda (na dzieñ 
 <?php
-$requestdate = current($conn -> query("SELECT date FROM id1915238_wstation.WeatherStats WHERE SID='".$stationID."' ORDER BY id DESC LIMIT 1")->fetch_assoc());
+$requestdate = current($conn -> query("SELECT date FROM ".$dbname.".WeatherStats WHERE SID='".$stationID."' ORDER BY id DESC LIMIT 1")->fetch_assoc());
 echo $requestdate
 ?>
 ): 
@@ -59,31 +59,31 @@ echo $stationID
 ?></td></tr>
 <tr><td>TEMPERATURA:</td><td>
 <?php
-$request = current($conn -> query("SELECT temp FROM id1915238_wstation.WeatherStats WHERE SID='".$stationID."' ORDER BY id DESC LIMIT 1")->fetch_assoc());
+$request = current($conn -> query("SELECT temp FROM ".$dbname.".WeatherStats WHERE SID='".$stationID."' ORDER BY id DESC LIMIT 1")->fetch_assoc());
 echo $request
 ?> &#186C</td></tr>
 
 <tr><td>CIŒNIENIE:</td><td>
 <?php
-$request = current($conn -> query("SELECT pres FROM id1915238_wstation.WeatherStats WHERE SID='".$stationID."' ORDER BY id DESC LIMIT 1")->fetch_assoc());
+$request = current($conn -> query("SELECT pres FROM ".$dbname.".WeatherStats WHERE SID='".$stationID."' ORDER BY id DESC LIMIT 1")->fetch_assoc());
 echo $request
 ?> hPa</td></tr>
 
 <tr><td>PRÊDKOŒÆ WIATRU:</td><td>
 <?php
-$request = current($conn -> query("SELECT wspd FROM id1915238_wstation.WeatherStats WHERE SID='".$stationID."' ORDER BY id DESC LIMIT 1")->fetch_assoc());
+$request = current($conn -> query("SELECT wspd FROM ".$dbname.".WeatherStats WHERE SID='".$stationID."' ORDER BY id DESC LIMIT 1")->fetch_assoc());
 echo $request
 ?> m/s</td></tr>
 
 <tr><td>KIERUNEK WIATRU:</td><td>
 <?php
-$request = current($conn -> query("SELECT wdir FROM id1915238_wstation.WeatherStats WHERE SID='".$stationID."' ORDER BY id DESC LIMIT 1")->fetch_assoc());
+$request = current($conn -> query("SELECT wdir FROM ".$dbname.".WeatherStats WHERE SID='".$stationID."' ORDER BY id DESC LIMIT 1")->fetch_assoc());
 echo $request
 ?>&#186</td></tr>
 
 <tr><td>WILGOTNOŒÆ:</td><td>
 <?php
-$request = current($conn -> query("SELECT hum FROM id1915238_wstation.WeatherStats WHERE SID='".$stationID."' ORDER BY id DESC LIMIT 1")->fetch_assoc());
+$request = current($conn -> query("SELECT hum FROM ".$dbname.".WeatherStats WHERE SID='".$stationID."' ORDER BY id DESC LIMIT 1")->fetch_assoc());
 echo $request
 ?>%</td></tr>
 
