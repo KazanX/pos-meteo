@@ -43,16 +43,20 @@ WYBIERZ STACJE Z TWOJEJ OKOLICY
 <section>
 <article>
 <center>Aktualna pogoda (na dzieñ 
-<script>
-document.write(((x=(t=new Date()).getDate())<10?"0":"")+x+"."+((x=(t.getMonth()+1))<10?"0":"")+x+"."+t.getFullYear()+" "+/[\d:]{8}/.exec(t)); 
-</script>
+<?php
+$requestdate = current($conn -> query("SELECT date FROM id1915238_wstation.WeatherStats WHERE SID='".$stationID."' ORDER BY id DESC LIMIT 1")->fetch_assoc());
+echo $requestdate
+?>
 ): 
 				
 				
 						
 <br />
 <table>
-<tr><td>IDENTYFIKATOR:</td>	<td><?php echo $stationID ?></td></tr>
+<tr><td>IDENTYFIKATOR:</td>	<td>
+<?php 
+echo $stationID 
+?></td></tr>
 <tr><td>TEMPERATURA:</td><td>
 <?php
 $request = current($conn -> query("SELECT temp FROM id1915238_wstation.WeatherStats WHERE SID='".$stationID."' ORDER BY id DESC LIMIT 1")->fetch_assoc());
